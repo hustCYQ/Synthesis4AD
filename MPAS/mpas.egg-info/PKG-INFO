@@ -1,0 +1,147 @@
+Metadata-Version: 2.4
+Name: mpas
+Version: 0.1.0
+Summary: Mesh Point cloud Anomaly Synthesis - 3D点云异常合成库
+Author: MPAS Team
+License: MIT
+Keywords: 3d,pointcloud,anomaly,synthesis,defect
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: open3d
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+# MPAS - Mesh Point cloud Anomaly Synthesis
+
+3D点云异常合成库
+
+## 安装
+
+```bash
+cd E:\cache\github\Desktop\MPAS
+pip install -e .
+```
+
+## 快速开始
+
+```python
+import numpy as np
+import mpas
+
+# 加载点云
+points = mpas.load_data_as_pointcloud("your_model.stl")
+
+# 方法1: 调用单个函数
+result = mpas.sphere(points, radius_ratio=0.03, convex=True)
+result = mpas.scratch(points, width_ratio=0.01)
+result = mpas.bend(points, rotate_angle=25)
+result = mpas.crack(points, plane_thickness_ratio=0.02)
+result = mpas.random(points, ellipse_a_ratio=0.05)
+
+# 方法2: 统一接口
+result = mpas.generate(points, 'sphere', radius_ratio=0.03)
+
+# 获取结果
+anomaly_points = result['anomaly_points']  # 变形后的点云
+mask_points = result['mask_points']        # 异常区域点
+gt = result['gt']                          # GT标签
+
+# 保存结果
+mpas.save_pointcloud(anomaly_points, "output_points.txt")
+mpas.save_gt(gt, "output_gt.txt")
+mpas.save_mask(mask_points, "output_mask.txt")
+```
+
+## 函数说明
+
+### sphere - 球形异常
+```python
+mpas.sphere(points,
+            radius_ratio=0.03,    # 球半径比例
+            convex=True,           # True=凸起, False=凹陷
+            stretch_scale=0.02,   # 变形强度
+            target_num=250000,    # 目标点数
+            normalize=True)       # 是否归一化
+```
+
+### scratch - 划痕异常
+```python
+mpas.scratch(points,
+             width_ratio=0.01,    # 划痕宽度比例
+             convex=True,
+             stretch_scale=0.005,
+             target_num=250000,
+             normalize=True)
+```
+
+### bend - 弯曲异常
+```python
+mpas.bend(points,
+          rotate_angle=25,       # 弯曲角度(度)
+          target_num=250000,
+          normalize=True)
+```
+
+### crack - 裂纹异常
+```python
+mpas.crack(points,
+           plane_thickness_ratio=0.02,  # 裂纹宽度比例
+           base_axis='x',               # 基准轴 'x'/'y'/'z'
+           angle_range=(0, 15),         # 与基准轴夹角范围
+           target_num=250000,
+           normalize=True)
+```
+
+### random - 不规则异常
+```python
+mpas.random(points,
+            ellipse_a_ratio=0.05,      # 椭球X轴比例
+            ellipse_b_ratio=0.05,      # 椭球Y轴比例
+            ellipse_c_ratio=0.05,      # 椭球Z轴比例
+            convex=True,               # True=凸起, False=凹陷
+            stretch_mode='noise',      # 变形模式: 'noise' 或 'surface_fit'
+            noise_strength=0.3,        # 高斯噪声强度 (noise模式)
+            custom_formula="cos(3*r)", # 自定义曲面公式 (surface_fit模式)
+            surface_scale=0.02,         # 曲面变形幅度
+            target_num=250000,
+            normalize=True)
+```
+
+**stretch_mode 说明**:
+- `'noise'`: 高斯噪声模式，在基础位移上添加随机噪声
+- `'surface_fit'`: 曲面拟合模式，使用自定义公式生成有机形变
+
+**custom_formula 示例**:
+```python
+"cos(3*r)"           # 余弦波
+"sin(5*r)"           # 正弦波
+"cos(4*r + theta)"   # 螺旋
+"exp(-2*r)"          # 指数衰减
+"sin(r*10)*cos(theta*2)"  # 复杂图案
+```
+
+## 返回值
+
+所有函数返回包含以下字段的字典:
+- `anomaly_points`: 变形后的点云 (N, 3)
+- `mask_points`: 异常区域的点 (M, 3)
+- `gt`: GT标签 (N, 1), 1=异常
+- `center`: 归一化中心点(如果normalize=True)
+
+## 依赖
+
+- numpy
+- open3d
+- scipy
+- scikit-learn

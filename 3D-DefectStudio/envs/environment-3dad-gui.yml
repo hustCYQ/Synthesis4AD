@@ -1,0 +1,22 @@
+name: 3dad-gui
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  - matplotlib
+  - pandas
+  - scikit-learn
+  - pyyaml
+  - tqdm
+  - pip:
+      - open3d==0.19.0
+      - pyside6==6.10.2
+      - pyopengl==3.1.10
+      - pyopengl-accelerate==3.1.10
+      - pyqtgraph==0.14.0
+      - dash==4.0.0
+      - plotly==6.6.0

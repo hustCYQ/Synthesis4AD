@@ -1,0 +1,99 @@
+
+Running on class custom
+
+Running on class custom
+
+Finished running on class custom
+
+Running on class custom
+
+Finished running on class custom
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.582 |  0.582 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.516 |  0.516 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |        0 |      0 |
+
+Running on class custom
+
+Finished running on class custom
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.582 |  0.582 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.516 |  0.516 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |        0 |      0 |
+
+Running on class custom
+
+Finished running on class custom
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.582 |  0.582 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.516 |  0.516 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |        0 |      0 |
+
+Running on class custom
+
+Finished running on class custom
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.582 |  0.582 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.516 |  0.516 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |        0 |      0 |
+
+Running on class custom
+
+Finished running on class custom
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.582 |  0.582 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.516 |  0.516 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |        0 |      0 |
+
+Running on class custom
+
+Finished running on class custom
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.582 |  0.582 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.516 |  0.516 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |        0 |      0 |
+
+Running on class custom
+
+Running on class custom
+
+Finished running on class custom
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.582 |  0.582 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |    0.516 |  0.516 |
+| Method   |   Custom |   Mean |
+|:---------|---------:|-------:|
+| Simple3D |        0 |      0 |

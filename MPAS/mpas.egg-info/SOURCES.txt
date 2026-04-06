@@ -1,0 +1,8 @@
+README.md
+mpas.py
+pyproject.toml
+mpas.egg-info/PKG-INFO
+mpas.egg-info/SOURCES.txt
+mpas.egg-info/dependency_links.txt
+mpas.egg-info/requires.txt
+mpas.egg-info/top_level.txt

@@ -1,0 +1,7 @@
+numpy
+open3d
+scipy
+scikit-learn
+
+[dev]
+pytest
