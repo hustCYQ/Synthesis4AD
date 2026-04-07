@@ -1,7 +1,7 @@
 # Synthesis4AD: Synthetic Anomalies are All You Need for 3D Anomaly Detection
 🌐 [GitHub Repository](https://github.com/hustCYQ/Synthesis4AD)
 
-> 📚 [**Paper**]() • 🏠 [**Project Homepage**]()  
+> 📚 [**Paper**](https://arxiv.org/abs/2604.04658) • 🏠 [**Project Homepage**]()  
 > by [Yihan Sun*](https://hustsyh.github.io/), [Yuqi Cheng*](https://hustcyq.github.io/), Junjie Zu, Yuxiang Tan, Guoyang Xie, Yucheng Wang, [Yunkang Cao](https://caoyunkang.github.io/), [Weiming Shen](https://scholar.google.com/citations?user=FuSHsx4AAAAJ&hl=en).
 
 ## 📑 Quick Navigation
