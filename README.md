@@ -274,11 +274,14 @@ Thanks to related 3D anomaly detection and point cloud processing projects for i
 If you find our data or code helpful for your research, please consider citing our paper:
 
 ```bibtex
-@article{sun2026synthesis4ad,
-  title={Synthesis4AD: Synthetic Anomalies are All You Need for 3D Anomaly Detection},
-  author={Sun, Yihan and Cheng, Yuqi and Zu, Junjie and Tan, Yuxiang and Xie, Guoyang and Wang, Yucheng and Cao, Yunkang and Shen, Weiming},
-  journal={Submitted to IEEE Transactions on Systems, Man, and Cybernetics: Systems},
-  year={2026}
+@misc{sun2026synthesis4ad,
+      title={Synthesis4AD: Synthetic Anomalies are All You Need for 3D Anomaly Detection}, 
+      author={Yihan Sun and Yuqi Cheng and Junjie Zu and Yuxiang Tan and Guoyang Xie and Yucheng Wang and Yunkang Cao and Weiming Shen},
+      year={2026},
+      eprint={2604.04658},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2604.04658}, 
 }
 ```
 
